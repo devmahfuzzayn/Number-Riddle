@@ -1,0 +1,409 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/* .number-riddle
+{
+
+} */
+
+body
+{
+    background: rgb(27, 26, 26);
+}
+
+/* Menu Container CSS */
+
+.number-riddle .menu-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.number-riddle .menu-container .box
+{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 30px 0;
+}
+
+.number-riddle .menu-container .timer-container
+{
+    position: relative;
+}
+
+.number-riddle .menu-container .timer-container .timer
+{
+    background: #2C170E;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ECBD85;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.number-riddle .menu-container .multi-option-container
+{
+    display: flex;
+}
+
+.number-riddle .menu-container .multi-option-container > div
+{
+    padding: 0 5px;
+}
+
+.number-riddle .menu-container .multi-option-container .restart-container .restart-button
+{
+    border: none;
+    background: #2C170E;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ECBD85;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.number-riddle .menu-container .multi-option-container .sound-control-container .sound-control-button
+{
+    width: 100%;;
+    border: none;
+    background: #2C170E;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ECBD85;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.number-riddle .menu-container .multi-option-container .sound-control-button.off
+{
+    transition: .2s;
+    opacity: .2;
+}
+
+/* Menu Container CSS */
+
+
+
+/* Alert Contianer CSS */
+
+.alert-container
+{
+    opacity: 0;
+    pointer-events: none;
+    z-index: -100000;
+}
+
+.alert-container.active
+{
+    opacity: 1;
+    pointer-events: all;
+    z-index: 10;
+}
+
+.alert-container .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    opacity: .8;
+    z-index: 1;
+    transition: .5s;
+}
+
+.alert-container .game-finish-menu-container
+{
+    display: none;
+}
+
+.alert-container .game-finish-menu-container.active
+{
+    display: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background: #2C170E;
+    z-index: 2;
+}
+
+.alert-container .game-finish-menu-container .box
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.alert-container .game-finish-menu-container .finish-timer-container .finish-timer
+{
+    background: #2C170E;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ECBD85;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.alert-container .game-finish-menu-container .finish-restart-container .finish-restart-button
+{
+    border: none;
+    background: #ECBD85;
+    padding: 10px;
+    border-radius: 5px;
+    color: #532c1b;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.alert-container .last-played-menu-container
+{
+    display: none;
+}
+
+.alert-container .last-played-menu-container.active
+{
+    display: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background: #2C170E;
+    z-index: 2;
+}
+
+.alert-container .last-played-menu-container .container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.alert-container .last-played-menu-container .container h2.alert-txt
+{
+    color: #ECBD85;
+    padding: 10px 0;
+}
+
+.alert-container .last-played-menu-container .container p
+{
+    color: #ECBD85;
+}
+
+.alert-container .last-played-menu-container .container .box
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.alert-container .last-played-menu-container .cancel-container .cancel-button
+{
+    border: none;
+    background: #ECBD85;
+    padding: 10px;
+    border-radius: 5px;
+    color: #532c1b;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+
+.alert-container .last-played-menu-container .sure-container .sure-button
+{
+    border: none;
+    background: #ECBD85;
+    padding: 10px;
+    border-radius: 5px;
+    color: #532c1b;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+
+/* Alert Contianer CSS */
+
+
+
+/* Number Riddle Game Box CSS */
+
+.number-riddle
+{
+    padding: 15vh 20px;
+}
+
+.number-riddle .container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-riddle .container .box-container
+{
+    height: 100%;
+    width: 500px;
+    background: #2C170E;
+    border-radius: 15px;
+}
+
+.number-riddle .container .box-container .outer-box
+{
+    background: #0f0805;
+    height: calc(100% - 34px);
+    width: calc(100% - 34px);
+    margin: 17px;
+}
+
+.number-riddle .game-container
+{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 116.5px));
+    justify-content: center;
+    align-items: center;
+}
+
+.number-riddle .game-container div.g
+{
+    height: 112.5px;
+    margin: 2px;
+    background: #ECBD85;
+    cursor: pointer;
+    position: relative;
+}
+
+.number-riddle .game-container div.g .rNumber
+{
+    color: #703a23;
+    font-size: clamp(30px, 10vw, 50px);
+    font-family: sans-serif;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number-riddle .game-container div.g-empty
+{
+    background: transparent;
+}
+
+/* Move box animation */
+
+/* Bottom Move Box Animation */
+
+.box-animation-t-move
+{
+    animation: 100ms box-animation-t-move ease;
+}
+
+@keyframes box-animation-t-move
+{
+    0%
+    {
+        transform: translateY(100%)
+    }
+
+    100%
+    {
+        transform: translateY(0%)
+    }
+}
+
+/* Bottom Move Box Animation */
+
+.box-animation-l-move
+{
+    animation: 100ms box-animation-l-move ease;
+}
+
+@keyframes box-animation-l-move
+{
+    0%
+    {
+        transform: translateX(100%)
+    }
+
+    100%
+    {
+        transform: translateX(0%)
+    }
+}
+
+/* Bottom Move Box Animation */
+
+.box-animation-r-move
+{
+    animation: 110ms box-animation-r-move ease;
+}
+
+@keyframes box-animation-r-move
+{
+    0%
+    {
+        transform: translateX(-100%)
+    }
+
+    100%
+    {
+        transform: translateX(0%)
+    }
+}
+
+/* Bottom Move Box Animation */
+
+.box-animation-b-move
+{
+    animation: 300ms box-animation-b-move ease;
+}
+
+@keyframes box-animation-b-move
+{
+    0%
+    {
+        transform: translateY(-100%)
+    }
+
+    100%
+    {
+        transform: translateY(0%)
+    }
+}
+
+/* Move box animation */
+
+/* Number Riddle Game Box CSS */
